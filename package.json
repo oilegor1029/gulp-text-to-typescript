@@ -1,0 +1,22 @@
+{
+  "name": "gulp-text-to-typescript",
+  "version": "0.1",
+  "description": "Gulp plugin for converting strings to Typescript class file",
+  "main": "gulp-text-to-typescript.js",
+  "keywords": [
+    "gulp",
+    "plugin",
+	
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oilegor1029/gulp-text-to-typescript.git"
+  },
+  "license": "WTFPL",
+  "peerDependencies": {
+    "vinyl": "*"
+  },
+  "devDependencies": {
+    "vinyl": "2.2.0"
+  }
+}
