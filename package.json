@@ -5,8 +5,7 @@
   "main": "gulp-text-to-typescript.js",
   "keywords": [
     "gulp",
-    "plugin",
-	
+    "plugin"
   ],
   "repository": {
     "type": "git",
