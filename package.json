@@ -1,6 +1,6 @@
 {
   "name": "gulp-text-to-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp plugin for converting strings to Typescript class file",
   "main": "gulp-text-to-typescript.js",
   "keywords": [
