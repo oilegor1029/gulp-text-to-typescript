@@ -14,10 +14,10 @@ const File = require('vinyl')
 module.exports = function gulpTextToTypescript(options) {
   options = Object.assign({}, options)
   if (!options.className) options.className = 'TsConstants'
-  return fileNameTransform(options)
+  return transformIntoFile(options)
 }
 
-function fileNameTransform({fileName, className}) {
+function transformIntoFile({fileName, className}) {
   if (!fileName || typeof fileName !== 'string') {
     throw Error(`Option 'fileName' must be a non-empty string, got: ${fileName}`)
   }
@@ -29,7 +29,7 @@ function fileNameTransform({fileName, className}) {
 
     transform(file, __, done) {
       if (file.isBuffer()) {
-        const path = parseClassname(pt.join('', file.relative))
+        const path = parsePathToVariableName(pt.join('', file.relative))
         //console.log(file);
         const text = file.contents.toString()
 
@@ -49,7 +49,7 @@ function fileNameTransform({fileName, className}) {
 }
 
 // Remove path and dashes and make class name uppercase
-function parseClassname(text) {
+function parsePathToVariableName(text) {
   //Remove extension
   text = text.replace(/\.[^/.]+$/, "");
   //Remove path
